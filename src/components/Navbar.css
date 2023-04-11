@@ -1,0 +1,19 @@
+.navbar {
+  padding: 10px 25px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  justify-content: center;
+  color: #2a2a2a;
+  font-family: Prompt;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 800;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 0 0 8px 8px;
+}
