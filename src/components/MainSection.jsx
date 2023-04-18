@@ -1,39 +1,46 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./MainSection.css";
 import Content from "./Content";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Context from "../Context";
 
 const MainSection = () => {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
+  const { setLoader } = useContext(Context);
 
   const options = {
     method: "GET",
-    url: "https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index",
-    params: { url: input },
+    url: process.env.REACT_APP_API_URL,
+    params: { shortcode: input.split("/")[4] },
     headers: {
       "X-RapidAPI-Key": "bba8e4f7famsh7ebc76b46ec70fcp1b7e56jsn8ee2958e8f80",
-      "X-RapidAPI-Host":
-        "instagram-downloader-download-instagram-videos-stories.p.rapidapi.com",
+      "X-RapidAPI-Host": "instagram-scraper-2022.p.rapidapi.com",
     },
   };
 
   const download = () => {
+    setLoader(true);
     if (input === "") {
       toast.error("Please enter a URL");
+      setLoader(false);
     } else if (!input.includes("https://www.instagram.com/")) {
       toast.error("URL is not valid");
+      setLoader(false);
     } else {
       axios
         .request(options)
         .then((res) => {
           setInput("");
           setData(res.data);
+          setLoader(false);
+          console.log(res.data);
         })
         .catch((err) => {
           toast.error("Something went wrong !! Please try again");
+          setLoader(false);
         });
     }
   };
