@@ -14,10 +14,10 @@ const MainSection = () => {
   const options = {
     method: "GET",
     url: process.env.REACT_APP_API_URL,
-    params: { shortcode: input.split("/")[4] },
+    params: { url: input },
     headers: {
       "X-RapidAPI-Key": "bba8e4f7famsh7ebc76b46ec70fcp1b7e56jsn8ee2958e8f80",
-      "X-RapidAPI-Host": "instagram-scraper-2022.p.rapidapi.com",
+      "X-RapidAPI-Host": "instagram-media-downloader.p.rapidapi.com",
     },
   };
 
