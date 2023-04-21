@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./MainSection.css";
 import Content from "./Content";
 import { toast } from "react-toastify";
@@ -10,6 +10,18 @@ const MainSection = () => {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
   const { setLoader } = useContext(Context);
+
+  useEffect(() => {
+    if(Object.keys(data).length > 0){  
+    if (data.hasOwnProperty('video')) { 
+      toast.success('ITS A REEL')      
+    } else if(data.hasOwnProperty('image')) {
+      toast.success('ITS A POST')
+    } else {
+      toast.success('ITS A CAROUSEL POST')
+    }
+  }  
+  }, [data]);
 
   const options = {
     method: "GET",
@@ -36,7 +48,6 @@ const MainSection = () => {
           setInput("");
           setData(res.data);
           setLoader(false);
-          console.log(res.data);
         })
         .catch((err) => {
           toast.error("Something went wrong !! Please try again");
@@ -81,7 +92,7 @@ const MainSection = () => {
           ></path>
         </svg>
         <span>Download</span>
-      </button>
+      </button>    
     </div>
   );
 };
