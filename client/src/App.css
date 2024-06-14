@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  background-color: black;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 60px;
+
+  user-select: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+body a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Create a custom scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Create a custom scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Add some styling to the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

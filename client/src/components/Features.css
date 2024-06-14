@@ -1,0 +1,178 @@
+.features {
+  font-family: Prompt;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.feat_title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.feat_descr {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main_guide {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.feat_guide {
+  padding: 10px;
+  display: flex;
+}
+
+.feat_guide:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.guide_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.guide_left img {
+  border-radius: 10px;
+  border: 3px solid #2a2a2a;
+  pointer-events: none;
+  width: 50%;
+}
+
+.guide_right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.guide_right span:nth-child(1) {
+  font-size: 25px;
+  font-weight: 500;
+}
+.guide_right span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 150px;
+}
+
+.steps li {
+  font-size: 15px;
+}
+
+.steps li::marker {
+  content: "Step " counter(list-item) " - ";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 150px;
+  row-gap: 15px;
+}
+.accordion-item {
+  row-gap: 15px;
+  border: 0;
+}
+
+.accordion-button {
+  border: 2px solid #2a2a2a;
+  background: radial-gradient(
+    circle at 30% 70%,
+    #fdf497 0%,
+    #fdf497 10%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 105%
+  );
+  background-attachment: fixed;
+  vertical-align: middle;
+  padding: 13px;
+  border-radius: 5px !important;
+  font-weight: 600;
+  color: #2a2a2a !important;
+}
+.accordion-button:focus {
+  border-color: #2a2a2a;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23000000"%3e%3cpath fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/%3e%3c/svg%3e');
+}
+
+@media screen and (max-width: 991.2px) {
+  .guide_left img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .feat_title {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .main_guide {
+    padding: 25px 10px;
+    gap: 50px;
+  }
+  .guide_left img {
+    width: 100%;
+  }
+  .feat_guide {
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .feat_guide:nth-child(even) {
+    flex-direction: column;
+  }
+  .feat_title {
+    font-size: 23px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .steps {
+    padding: 15px 35px;
+  }
+
+  .accordion {
+    margin: 20px 15px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .guide_right span:nth-child(1) {
+    font-size: 20px;
+  }
+  .guide_right span:nth-child(2) {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1300px) {
+}

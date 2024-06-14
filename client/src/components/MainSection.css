@@ -1,0 +1,388 @@
+.mainSection {
+  padding: 40px 0 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+}
+
+.cat {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #000;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 2px 12px;
+  border-radius: 7px;
+}
+
+.cat li {
+  margin: 5px;
+  font-size: 19px;
+  font-family: Prompt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.sec-txt-1 {
+  padding: 0;
+  margin: 15px 0 0 0;
+  letter-spacing: 0.5px;
+  font-size: 35px;
+  font-family: Prompt;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+}
+
+.sec-txt-2 {
+  padding: 0;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-family: Prompt;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+
+.input-section {
+  margin: 15px 0 10px 0;
+  position: relative;
+  display: flex;
+}
+
+.dp-info {
+  font-size: 13px;
+  font-family: Prompt, sans-serif;
+  font-weight: 400;
+  color: yellow;
+  position: absolute;
+  left: 5px;
+  bottom: -21px;
+}
+
+.input-section .input {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  width: 650px;
+  color: #2a2a2a;
+  font-family: Prompt;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.paste-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 3px;
+  gap: 5px;
+  padding: 0 10px;
+  background-color: #2a2a2a;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paste-btn:hover {
+  transform: scale(0.9);
+}
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: Prompt;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0.9rem 1.9rem;
+  margin: 15px 0;
+  color: whitesmoke;
+  background: #ad5389;
+  background: linear-gradient(
+    0deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #4d36d0be;
+  letter-spacing: 1.5px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+.mediaSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+.mediaSection .Post {
+  background-color: #2a2a2a;
+  height: 400px;
+  width: 300px;
+  /* set padding to 4px for border */
+  padding: 0px;
+  border-radius: 15px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mediaSection .Post img {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/* PROGRESS CSS START */
+
+.wrapper {
+  position: fixed;
+  top: 90px;
+  width: 350px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  background-color: #f5f5f5;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 8px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+  transition: width 50ms ease-in-out;
+}
+
+.progress-text {
+  font-family: Prompt;
+  font-weight: 700;
+}
+
+/* PROGRESS CSS END */
+
+.Post button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.Post i {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  color: #2a2a2a;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mediaBtn {
+  padding: 6px 5px;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  font-family: Prompt;
+  color: #fff;
+  text-shadow: none;
+  background: #0063f9;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: none;
+  transition: 0.1s ease;
+  user-select: none;
+}
+
+/* SCROLL TO TOP START*/
+.topBtn {
+  position: fixed;
+  user-select: none;
+  bottom: 20px;
+  right: 25px;
+  height: 45px;
+  width: 45px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 100ms ease;
+  z-index: 9;
+}
+
+.topBtn:active {
+  transform: scale(0.9, 0.9);
+}
+
+.topBtn i {
+  color: #0f172a;
+  font-size: 30px;
+  display: flex;
+}
+/* SCROLL TO TOP END */
+
+@media screen and (max-width: 991.2px) {
+  .topBtn {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .input-section .input {
+    width: 350px;
+  }
+
+  .mediaSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 12px;
+  }
+
+  .mediaSection .Post {
+    height: 400px;
+    width: 100%;
+  }
+  .paste-btn span {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .mediaSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .mediaSection .Post {
+    height: 330px;
+    width: 260px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .sec-txt-1 {
+    font-size: 25px;
+  }
+
+  .sec-txt-2 {
+    font-size: 15px;
+  }
+
+  .cat li {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .cat label {
+    display: none;
+  }
+  .input-section {
+    margin-top: 10px;
+  }
+  .input-section .input {
+    width: 370px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .input-section .input {
+    width: 500px;
+  }
+
+  .mediaSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .mediaSection .Post {
+    height: 330px;
+    width: 260px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 950px) {
+  .mediaSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+
+  .mediaSection .Post {
+    height: 350px;
+    width: 270px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1300px) {
+  .mediaSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+  }
+
+  .mediaSection .Post {
+    height: 350px;
+    width: 270px;
+  }
+}
