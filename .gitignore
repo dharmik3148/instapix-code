@@ -1,8 +1,0 @@
-# Ignore all node_modules directories
-node_modules/
-server/node_modules/
-client/node_modules/
-
-# Optional: Add other files and folders to ignore
-.DS_Store
-*.log
